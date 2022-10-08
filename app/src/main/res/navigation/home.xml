@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.attendx.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_joinOrganizationFragment"
+            app:destination="@id/joinOrganizationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createOrganizationFragment"
+            app:destination="@id/createOrganizationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addFingerprintFragment"
+            app:destination="@id/addFingerprintFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOrganizationFragment"
+        android:name="com.example.attendx.ui.CreateOrganizationFragment"
+        android:label="fragment_create_organization"
+        tools:layout="@layout/fragment_create_organization" >
+        <action
+            android:id="@+id/action_createOrganizationFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinOrganizationFragment"
+        android:name="com.example.attendx.ui.JoinOrganizationFragment"
+        android:label="fragment_join_organization"
+        tools:layout="@layout/fragment_join_organization" />
+    <fragment
+        android:id="@+id/addFingerprintFragment"
+        android:name="com.example.attendx.ui.AddFingerprintFragment"
+        android:label="AddFingerprintFragment" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.attendx.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>

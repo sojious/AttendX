@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_loggedout_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.attendx.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_biometricChoiceFragment"
+            app:destination="@id/biometricChoiceFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_loggedout_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.attendx.ui.CreateAccountFragment"
+        android:label="fragment_create_account"
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_biometricChoiceFragment"
+            app:destination="@id/biometricChoiceFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_accountSuccessFragment"
+            app:destination="@id/accountSuccessFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/createAccountFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.attendx.ui.WelcomeFragment"
+        android:label="fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_loggedout_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/biometricChoiceFragment"
+        android:name="com.example.attendx.ui.BiometricChoiceFragment"
+        android:label="fragment_biometric_choice"
+        tools:layout="@layout/fragment_biometric_choice" />
+    <fragment
+        android:id="@+id/accountSuccessFragment"
+        android:name="com.example.attendx.ui.AccountSuccessFragment"
+        android:label="fragment_account_sucess"
+        tools:layout="@layout/fragment_account_sucess" >
+        <action
+            android:id="@+id/action_accountSuccessFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/accountSuccessFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

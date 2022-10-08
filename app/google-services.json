@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "824953419979",
+    "project_id": "attendx-1a4ba",
+    "storage_bucket": "attendx-1a4ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824953419979:android:4645e88d2f2231ae23c34e",
+        "android_client_info": {
+          "package_name": "com.example.attendx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824953419979-hrf9las5m72aa8tfenrp1o4utku90t77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.attendx",
+            "certificate_hash": "aa5032390558cdd09fa892a9c3c61635e87f0b51"
+          }
+        },
+        {
+          "client_id": "824953419979-6fp197ben42bjtuomhr1u1kof5ea7gcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9U1MexYERc2EvVyAZ0t6wpMEyR85_2I0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824953419979-6fp197ben42bjtuomhr1u1kof5ea7gcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
